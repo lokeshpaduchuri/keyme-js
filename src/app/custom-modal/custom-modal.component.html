@@ -1,0 +1,20 @@
+<div class="dialogContainer">
+    <h2 mat-dialog-title>Confirm The Address Below</h2>
+<mat-dialog-content>
+    <div class="addressInfo">
+        <div class="col">
+            <div>Full Name: {{fullName}}</div> 
+            <div>Street Name: {{streetAddress}}</div>
+            <div *ngIf="aptNo" >Apartment No: {{aptNo}}</div>
+            <div>City: {{city}}</div>
+            <div>State: {{state}}</div>
+            <div>ZipCode: {{zip}}</div>
+            <div>E-mail: {{emailID}}</div>
+        </div>
+        
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <!-- The mat-dialog-close directive optionally accepts a value as a result for the dialog. -->
+</mat-dialog-actions>
+</div>

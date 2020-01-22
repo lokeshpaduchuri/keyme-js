@@ -1,0 +1,33 @@
+<div class="addressContainer">
+    <h1 class="heading1"> Part of Your Order Needs to Be Made at KeyMe Headquarters</h1>
+    <h2 class="heading2"> -- And will ship for FREE in discreet packaging --</h2>
+    <div class="paddingInput">
+        <input type="text" placeholder="Full Name" [(ngModel)]="fullName"/>
+        <div *ngIf="fullNameError" class="errorText"> Full Name is empty</div>
+    </div>
+    
+    <div class="paddingInput">
+        <input class="paddingRight" type="text" placeholder="Street Address" [(ngModel)]="streetAddress"/> 
+        <span *ngIf="streetAddressError" class="errorText"> Street Address empty</span>
+        <input type="text" placeholder="Apt #" [(ngModel)]="aptNo"/>
+    </div>
+    <div class="paddingInput">
+        <input class="paddingRight" type="text" placeholder="Enter City Name" [(ngModel)]="cityName"/> 
+        <span *ngIf="cityNameError" class="errorText"> City Name empty</span>
+        <input class="paddingRight" type="text" placeholder="State" [(ngModel)]="stateCode"/> <span *ngIf="stateCodeError" class="errorText"> State Name Empty</span>
+        <input type="number" pattern="[0-9]{5}" placeholder="Zip" [(ngModel)]="zip"/> <span *ngIf="zipError" class="errorText"> Zip Code Empty</span>
+    </div>
+    <div class="paddingInput">
+        <input type="email" placeholder="Email Address" [(ngModel)]="emailAddress" required ng-pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"/>
+        <div *ngIf="emailAddressError" class="errorText"> Email Adress empty</div>
+    </div>
+    <div class="paddingInput">
+        <span>We will only send you information regarding your order and KeyMe services and promotions. We will never share your information with a third party</span>
+    </div>
+    <div class="paddingInput">
+        <button (click)="completeOrder()" >Continue</button>
+    </div>
+    <div class="paddingInput">
+        <button><a [routerLink] = "'/products'">Edit Order</a></button>
+    </div>
+</div>

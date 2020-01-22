@@ -1,0 +1,31 @@
+<div class="productContainer">
+    <h1 class="heading1">Add or Scan Your Free Key</h1>
+    <h2 class="heading2">Free Delivery ____________________________</h2>
+    <div class="row productClass">
+        <!-- This div is used to loop through the data.json and display the Keys along with their name and value-->
+        <div class="col-md-4 keyContainer" *ngFor="let keys of Data | paginate: { itemsPerPage: count, currentPage: p }">
+          <img class="imgClass" src={{keys.imageURL}}/>
+          <h2>{{keys.display_name}}</h2>
+          <h3 class="fadeText">${{keys.cost}}</h3>
+          <div>
+            <!-- Button to add the keys to the cart displayed only when the key is not added to the cart-->  
+            <button class="cartButton" (click)="addToCart(keys)" *ngIf="!keys.order" >Add to Cart</button>
+            
+            <!-- This section is displayed when atleast one key is added to the cart -->  
+            <div *ngIf="keys.order">
+                <button class="button button5" (click)="reduceKeyCount(keys)" > - </button>
+                <span class="noOfKeys">{{keys.order}}</span>
+                <button class="button button5" (click)="incrementKeyCount(keys)"> + </button>
+            </div>
+          </div>
+          
+        </div>
+        
+    </div>
+    
+    <div class="proceedButton">
+       <pagination-controls (pageChange)="p = $event"></pagination-controls>
+     </div>
+    
+    <button class="proceedButton"><a [routerLink] = "'/address'">Proceed To Checkout</a></button>
+</div>
