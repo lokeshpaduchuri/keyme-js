@@ -1,27 +1,20 @@
-# CatalogAngular
+For this project you'll be creating a product list page and address entry form; pngs for both attached.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.5.
+Please use any libraries or frameworks that will help you achieve the best
+result in the most reasonable amount of time. It's important to us that you can explain why you chose certain technologies but much less important what those techs are.
 
-## Development server
+Please use the attached pngs as reference/inspiration. You do not need to copy our styles exactly. Just produce a visually complete piece of work.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Please use the attached JSON to display product data.
 
-## Code scaffolding
+Product List Page
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+ * We'd like see products paginated in groups of 9
+ * "Add To Cart" buttons for each product should show the CTA when there are 0 selected products and +/- buttons when one or more items are selected.
+ * This page should have a "Proceed to Checkout" that advances the user to the Address Entry Page
 
-## Build
+Address Entry Page
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+ * Please match the fields we have in place
+ * The form should have basic validation
+ * Successful form submission should show the user a modal to confirm their address.
